@@ -1,0 +1,42 @@
+
+light:
+  - platform: mqtt
+    schema: json
+    name: model_rocket_led
+    state_topic: "rocket/led"
+    command_topic: "rocket/led/set"
+    rgb: true
+    effect: true
+    effect_list:
+      [
+        rocket_take_off,
+        rocket_flight,
+        bpm,
+        candy cane,
+        confetti,
+        cyclon rainbow,
+        dots,
+        fire,
+        glitter,
+        juggle,
+        lightning,
+        noise,
+        police all,
+        police one,
+        rainbow,
+        rainbow with glitter,
+        ripple,
+        sinelon,
+        solid,
+        twinkle,
+      ]
+    optimistic: false
+    qos: 0
+
+input_number:
+  rocket_animation_speed:
+    name: Rocket Animation Speed
+    initial: 150
+    min: 1
+    max: 150
+    step: 10
